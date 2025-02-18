@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="wrapper-sm">
+      <section class="header">
+        <h1>Is it a palindrome?</h1>
+      </section>
+      <section class="form">
+        <div class="form-group">
+          <input
+            id="text-input"
+            class="form-field"
+            type="text"
+            placeholder=""
+          />
+          <label for="text-input" class="form-label"
+            >Enter in text to check for a palindrome:</label
+          >
+        </div>
+        <button id="check-btn">Check</button>
+        <span id="result"></span>
+      </section>
+      <section class="description">
+        A palindrome is a word or phrase that can be read the same way forwards
+        and backwards, ignoring punctuation, case, and spacing.
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

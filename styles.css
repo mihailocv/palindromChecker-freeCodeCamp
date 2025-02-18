@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary: hsl(10, 90%, 55%);
+  --secondary: hsl(0, 0%, 80%);
+
+  --background-color: hsl(237, 100%, 13%);
+  --text-color: hsl(0, 0%, 100%);
+
+  --form-background: hsl(0, 0%, 100%);
+  --form-color: hsl(0, 0%, 0%);
+  --input-border-color: var(--primary);
+  --label-color: hsla(0, 0%, 0%, 1);
+
+  --border-color: hsl(236, 40%, 23%);
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.wrapper {
+  width: min(100% - 3rem, 75rem);
+  margin-inline: auto;
+}
+
+.wrapper-sm {
+  width: min(100% - 3rem, 30rem);
+  margin-inline: auto;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  height: 100%;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--form-background);
+  color: var(--form-color);
+  border-radius: 15px;
+  padding-inline: 20px;
+  padding-block: 30px;
+  font-size: 1rem;
+}
+
+.form-group {
+  position: relative;
+  padding-block-start: 15px;
+  margin-block-start: 10px;
+  width: 100%;
+}
+
+.form-field {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--input-border-color);
+  outline: 0;
+  font-size: 1.2rem;
+  padding-block: 7px;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form-field::placeholder {
+  color: transparent;
+}
+
+.form-field:placeholder-shown ~ .form-label {
+  font-size: 1rem;
+  cursor: text;
+  top: 25px;
+}
+
+.form-label {
+  position: absolute;
+  top: -7px;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: var(--label-color);
+  font-weight: 200;
+}
+
+.form-field:focus ~ .form-label {
+  position: absolute;
+  top: -7px;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.form-field:focus {
+  padding-block-end: 6px;
+  font-weight: 700;
+  border-width: 3px;
+}
+
+.form-field:required,
+.form-field:invalid {
+  box-shadow: none;
+}
+
+#check-btn {
+  color: var(--text-color);
+  background-color: var(--primary);
+  text-transform: uppercase;
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  padding-inline: 10px;
+  padding-block: 5px;
+}
+
+#check-btn:active {
+  color: var(--primary);
+  background-color: var(--background-color);
+  border-color: var(--secondary);
+}
+
+#result:not(:empty) {
+  padding-block-start: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.2rem;
+}
